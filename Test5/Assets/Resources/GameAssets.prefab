@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3864885892869468834
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3816552933664069548}
+  - component: {fileID: 8419589487942022807}
+  m_Layer: 0
+  m_Name: GameAssets
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3816552933664069548
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3864885892869468834}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.154176, y: 0.4198219, z: -4.4828253}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8419589487942022807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3864885892869468834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb7214800d5e2486680db50e47decb13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pfDamagePopUp: {fileID: 2183040670704083330, guid: 800b0a41328a74184b2b5c10455c4fe3,
+    type: 3}
+  pfEnemy: {fileID: 561395403785626091, guid: 2de2f0bbb0620471199eb22cdd24ed38, type: 3}
+  Puff: {fileID: 4136627317124394629, guid: 2433ea9de77f6497e8d9e206be4742d3, type: 3}
+  Blood: {fileID: 4608415484793989924, guid: e027415b2be7b4f86b6f6825aa30e427, type: 3}
+  boom: {fileID: 4086100585679397672, guid: 01b50acf987894b0087a08db06678d99, type: 3}
+  icetrail: {fileID: 8103947064344464619, guid: 5769908d75527429fa2483db399cadf8,
+    type: 3}
+  flametrail: {fileID: 6147737505418888544, guid: 45592695bb1fa4080a0c3023fbf71b63,
+    type: 3}
+  dustCloud: {fileID: 321266258075374809, guid: 6837e706a6d844ba5a5c9da10d9befab,
+    type: 3}
+  bloodstain1: {fileID: 6061637006616560985, guid: ee245870b8d144a73b843110d207d0cb,
+    type: 3}
+  questButton: {fileID: 1521769949999493663, guid: 630b690672eba4cbd9ca9984274c7e20,
+    type: 3}
+  basicAttack: {fileID: 2483613699973902082, guid: b02a6345af2204c628a4242f2a33b9b2,
+    type: 3}
