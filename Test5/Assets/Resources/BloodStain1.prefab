@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2339753956061424847}
   - component: {fileID: 4215261787156889752}
   - component: {fileID: 8410872340641137200}
+  - component: {fileID: 8563759841538249669}
   m_Layer: 0
   m_Name: BloodStain1
   m_TagString: Untagged
@@ -94,3 +95,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54b4119c7f77b4f2284a2de4730667bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8563759841538249669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6061637006616560985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb89bf8f596f2479ab23350b1d8a9fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 0
+  runOnlyOnce: 1
+  plus: 0

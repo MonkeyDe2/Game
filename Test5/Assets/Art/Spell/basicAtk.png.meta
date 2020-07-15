@@ -17,6 +17,15 @@ TextureImporter:
   - first:
       213: -446031249796196082
     second: attack_4.1-Sheet_4
+  - first:
+      213: 2140026436491687958
+    second: basicAtk_0
+  - first:
+      213: 3505122378411384527
+    second: basicAtk_1
+  - first:
+      213: -7039901187166850457
+    second: basicAtk_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -102,7 +111,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: attack_4.1-Sheet_0
+      name: basicAtk_0
       rect:
         serializedVersion: 2
         x: 0
@@ -116,14 +125,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 634b7a58131c4b7d0800000000000000
-      internalID: -2903483441307208650
+      spriteID: 6183805a4b6e2bd10800000000000000
+      internalID: 2140026436491687958
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: attack_4.1-Sheet_1
+      name: basicAtk_1
       rect:
         serializedVersion: 2
         x: 100
@@ -137,14 +146,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9abd96ae6115f50a0800000000000000
-      internalID: -6890699745989633111
+      spriteID: fce9b737b32b4a030800000000000000
+      internalID: 3505122378411384527
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: attack_4.1-Sheet_2
+      name: basicAtk_2
       rect:
         serializedVersion: 2
         x: 200
@@ -158,8 +167,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a5a61ed87bc21770800000000000000
-      internalID: 8580143960076756389
+      spriteID: 762b1155b2f3d4e90800000000000000
+      internalID: -7039901187166850457
       vertices: []
       indices: 
       edges: []

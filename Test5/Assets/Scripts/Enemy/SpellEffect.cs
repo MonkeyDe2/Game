@@ -18,18 +18,6 @@ public class SpellEffect : MonoBehaviour
             playerSpellStat = value;
         }
     }
-
-    public Enemy Enemy
-    {
-        get
-        {
-            return enemy;
-        }
-        set
-        {
-            enemy = value;
-        }
-    }
     
 
 
@@ -52,7 +40,6 @@ public class SpellEffect : MonoBehaviour
 
 
     public void StartBurn(string effect){
-        //Instantiate(GameAssets.i.flametrail, transform.position + offset, Quaternion.identity).transform.SetParent(transform);
         if (burning < playerSpellStat.BurnDuration)
         {
             CancelInvoke(effect);
@@ -71,7 +58,6 @@ public class SpellEffect : MonoBehaviour
     }
     
     void Burn(){
-        //Instantiate(GameAssets.i.flametrail, transform.position + offset, Quaternion.identity).transform.SetParent(transform);
         enemy.Burn(playerSpellStat.BurnDamage);
         burning++;
         if (burning >= playerSpellStat.BurnDuration){
@@ -79,7 +65,6 @@ public class SpellEffect : MonoBehaviour
         }               
     }
     void Slow(){
-        //Instantiate(GameAssets.i.icetrail, transform.position + offset, Quaternion.identity).transform.SetParent(transform);
         enemy.Slow(newspeed);
         enemy.CurrentColor = slowColor;
         enemy.MySpriteRenderer.color = enemy.CurrentColor;
