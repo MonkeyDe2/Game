@@ -221,7 +221,7 @@ public class Player : MonoBehaviour
         Vector3 mouseDir = (mousePosition - transform.position).normalized;
         
         int dir = BasicAttackOffset(mousePosition);
-        Debug.Log(lastMoveDir);
+        //Debug.Log(lastMoveDir);
 
         animationManager.AttackAnimation(lastMoveDir);
         animationManager1.AttackAnimation(lastMoveDir);
