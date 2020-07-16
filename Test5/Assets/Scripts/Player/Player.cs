@@ -10,7 +10,8 @@ public class Player : MonoBehaviour
     private CanvasGroup canvasGroup;
 
 
-    private enum State{
+    private enum State
+    {
       Normal,
       Rolling,
       Casting,
@@ -52,7 +53,8 @@ public class Player : MonoBehaviour
     }
 
 
-    private void Start(){
+    private void Start()
+    {
 
       rigidbody2D = GetComponent<Rigidbody2D>();
       animationManager = GetComponent<AnimationManager>();
@@ -69,7 +71,8 @@ public class Player : MonoBehaviour
     }
 
 
-    private void Update(){
+    private void Update()
+    {
 
       switch (state){
         case State.Normal:
@@ -78,13 +81,13 @@ public class Player : MonoBehaviour
           PauseDust();
           
           
-            if (Active && Input.GetKeyDown(KeyCode.T)){
-            canvasGroup.alpha = canvasGroup.alpha > 0 ? 0 : 1;
-            canvasGroup.blocksRaycasts = canvasGroup.blocksRaycasts == true ? false : true;
-            open = open == false ? true: false;
-          }   
+        if (Active && Input.GetKeyDown(KeyCode.T)){
+           canvasGroup.alpha = canvasGroup.alpha > 0 ? 0 : 1;
+           canvasGroup.blocksRaycasts = canvasGroup.blocksRaycasts == true ? false : true;
+           open = open == false ? true: false;
+        }   
 
-          dashTimer += Time.deltaTime;
+        dashTimer += Time.deltaTime;
         if (Active){
           if (!open){
             if (Input.GetKey(KeyCode.W)){
