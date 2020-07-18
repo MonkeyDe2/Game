@@ -29,10 +29,10 @@ public class QuestManager : MonoBehaviour
         
     }
 
-    void Update()
-    {
-        quest.PrintPath();
-    }
+    // void Update()
+    // {
+    //     quest.PrintPath();
+    // }
 
     public void UpdateQuestsOnCompletion(QuestEvent e)
     {

@@ -20,6 +20,9 @@ public class Spell
 
   [SerializeField]
   private GameObject spellPrefab;
+  
+  [SerializeField]
+  private int spellIndex;
 
 
 
@@ -28,6 +31,13 @@ public class Spell
       return name;
     }
   }
+
+  public int SpellIndex {
+    get{
+      return spellIndex;
+    }
+  }
+
   public int MyDamage {
     get{
       return damage;

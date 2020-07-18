@@ -27,12 +27,12 @@ public class Quest
     }
 
 
-    public void PrintPath()
-    {
-        foreach (QuestEvent n in questEvents)
-        {
-            Debug.Log(n.name +  " " + n.status);
-        }
-    }
+    // public void PrintPath()
+    // {
+    //     foreach (QuestEvent n in questEvents)
+    //     {
+    //         Debug.Log(n.name +  " " + n.status);
+    //     }
+    // }
 
 }

@@ -7,7 +7,7 @@ public class SpellBookContainer : MonoBehaviour
 {
     [SerializeField] private GameObject[] spellIcons;
     [SerializeField] private Image[] spellHotbar;
-    public int[] spellIndexInHotbar = new int[3];
+    public int[] spellIndexInHotbar;
 
     private CanvasGroup canvasGroup;
 
@@ -15,10 +15,13 @@ public class SpellBookContainer : MonoBehaviour
     void Start()
     {
         canvasGroup = GetComponent<CanvasGroup>();
+        spellIndexInHotbar = new int[] {-1,-1,-1};
     }
 
     void Update()
     {
+        
+        Debug.Log(spellIndexInHotbar[0]);
         if (canvasGroup.alpha == 0) return;
 
         if(Input.GetKeyDown(KeyCode.Alpha1)){

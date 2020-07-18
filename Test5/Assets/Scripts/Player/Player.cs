@@ -266,15 +266,15 @@ public class Player : MonoBehaviour
       if (!open && Active){
             if (Input.GetKeyDown(KeyCode.Alpha1)){
             
-            spellBook.CastSpell("Fire", 0);
+            spellBook.CastSpellMain(0);
             }
             if (Input.GetKeyDown(KeyCode.Alpha2)){
             
-            spellBook.CastSpell("Ice", 1);
+            spellBook.CastSpellMain(1);
             }
             if (Input.GetKeyDown(KeyCode.Alpha3)){
             
-            spellBook.CastSpellLight("Light", 2);
+            spellBook.CastSpellMain(2);
             }
         }
       
