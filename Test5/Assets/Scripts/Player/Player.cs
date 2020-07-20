@@ -278,7 +278,8 @@ public class Player : MonoBehaviour
             }
         }
       
-      if (spellBook.castingProgess){
+      if (spellBook.castingProgess)
+      {
         state = State.Casting;
         StartCoroutine(UtilClass.Wait(0.5f, () => state = State.Normal));
         spellBook.castingProgess = false;
