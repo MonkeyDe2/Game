@@ -35,13 +35,13 @@ class FollowState : IState
         } else {
             if (seeker.IsDone()){
             seeker.StartPath(parent.transform.position, parent.Target.transform.position, OnPathComplete);
-        }
+            }
             if (path == null)
                 return;
             
+            FixedUpdate();
             
-            parent.Direction = ((Vector3)path.vectorPath[currentWaypoint] - parent.transform.position).normalized;
-            parent.transform.position = Vector2.MoveTowards(parent.transform.position, (Vector3)path.vectorPath[currentWaypoint], parent.CurrentSpeed * Time.deltaTime);
+            //parent.transform.position = Vector2.MoveTowards(parent.transform.position, (Vector3)path.vectorPath[currentWaypoint], parent.CurrentSpeed * Time.deltaTime);
 
             float waypointDistance = Vector2.Distance(parent.transform.position, path.vectorPath[currentWaypoint]);
 
@@ -56,6 +56,18 @@ class FollowState : IState
             }
         }
         
+    }
+
+    public void FixedUpdate()
+    {
+        if (parent.InRange){
+            if (path == null)
+                return;
+                parent.Direction = ((Vector3)path.vectorPath[currentWaypoint] - parent.transform.position).normalized;
+                Vector3 force = parent.Direction * parent.CurrentSpeed * Time.deltaTime;
+
+                parent.MyRigidBody.AddForce(force);
+        }
     }
 
     void OnPathComplete(Path p)

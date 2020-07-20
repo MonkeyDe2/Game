@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IceSpell : MonoBehaviour
+public class WindSpell : MonoBehaviour
 {
     private SpellEffect spellEffect;
     private SpellScript spellScript;
@@ -12,9 +12,7 @@ public class IceSpell : MonoBehaviour
             spellScript = gameObject.GetComponent<SpellScript>();
             other.GetComponent<Enemy>().TakeDamage(transform.position, spellScript.damage, spellScript.source, Color.blue);
             spellEffect = other.GetComponent<SpellEffect>();
-            spellEffect.StartSlow("Slow");
-
+            spellEffect.Knockback(transform.position);
         }
     }
-
 }

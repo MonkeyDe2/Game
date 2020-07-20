@@ -6,10 +6,10 @@ using TMPro;
 public class DamagePopUp : MonoBehaviour
 {
 
-    public static void Create(Vector3 position, float damageAmount){
+    public static void Create(Vector3 position, float damageAmount, Color customColor){
       Transform damagePopUpTransform = Instantiate(GameAssets.i.pfDamagePopUp, position, Quaternion.identity);
       DamagePopUp damagePopup = damagePopUpTransform.GetComponent<DamagePopUp>();
-      damagePopup.Setup(damageAmount);
+      damagePopup.Setup(damageAmount, customColor);
     }
 
 
@@ -26,9 +26,11 @@ public class DamagePopUp : MonoBehaviour
       transform.position = new Vector3(transform.position.x,transform.position.y + 40,transform.position.z);
 
     }
-    public void Setup(float damageAmount){
+    public void Setup(float damageAmount, Color? customColor = null){
       textMesh.SetText(damageAmount.ToString());
-      textColor = textMesh.color;
+      //textColor = textMesh.color;
+      textColor = customColor ?? textMesh.color;
+      textMesh.color = textColor;
       disappearTimer = dissappear_time_max;
       moveVector = new Vector3(0, 20) * 3f;
       sortingOrder ++;

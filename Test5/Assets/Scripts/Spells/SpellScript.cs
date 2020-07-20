@@ -23,7 +23,6 @@ public class SpellScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other){
         if(other.tag == "Enemy"){
-            other.GetComponent<Enemy>().TakeDamage(transform.position, damage, source);
             Destroy(gameObject);
         }
     }

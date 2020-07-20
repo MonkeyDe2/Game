@@ -43,21 +43,21 @@ public class SpellBook : MonoBehaviour
         {
             currentCooldowns[i] -= Time.deltaTime;
         }
-
-        if (spellBookContainer.selected != -1)
+        UpdateSpellCD();
+    }
+    public void UpdateSpellCD(){
+ 
+        if (spellBookContainer.spellIndexInHotbar[0] != -1)
         {
-            if (spellBookContainer.spellIndexInHotbar[0] != -1)
-            {
-                Canvas.transform.GetChild(1).GetChild(0).GetChild(0).GetComponent<Image>().fillAmount = currentCooldowns[spellBookContainer.spellIndexInHotbar[0]] / spells[spellBookContainer.spellIndexInHotbar[0]].Cooldown;
-            }
-            if (spellBookContainer.spellIndexInHotbar[1] != -1)
-            {
-                Canvas.transform.GetChild(1).GetChild(1).GetChild(0).GetComponent<Image>().fillAmount = currentCooldowns[spellBookContainer.spellIndexInHotbar[1]] / spells[spellBookContainer.spellIndexInHotbar[1]].Cooldown;
-            }
-            if (spellBookContainer.spellIndexInHotbar[2] != -1)
-            {
-                Canvas.transform.GetChild(1).GetChild(2).GetChild(0).GetComponent<Image>().fillAmount = currentCooldowns[spellBookContainer.spellIndexInHotbar[2]] / spells[spellBookContainer.spellIndexInHotbar[2]].Cooldown;
-            }
+            Canvas.transform.GetChild(1).GetChild(0).GetChild(0).GetComponent<Image>().fillAmount = currentCooldowns[spellBookContainer.spellIndexInHotbar[0]] / spells[spellBookContainer.spellIndexInHotbar[0]].Cooldown;
+        }
+        if (spellBookContainer.spellIndexInHotbar[1] != -1)
+        {
+            Canvas.transform.GetChild(1).GetChild(1).GetChild(0).GetComponent<Image>().fillAmount = currentCooldowns[spellBookContainer.spellIndexInHotbar[1]] / spells[spellBookContainer.spellIndexInHotbar[1]].Cooldown;
+        }
+        if (spellBookContainer.spellIndexInHotbar[2] != -1)
+        {
+            Canvas.transform.GetChild(1).GetChild(2).GetChild(0).GetComponent<Image>().fillAmount = currentCooldowns[spellBookContainer.spellIndexInHotbar[2]] / spells[spellBookContainer.spellIndexInHotbar[2]].Cooldown;
         }
         
     }

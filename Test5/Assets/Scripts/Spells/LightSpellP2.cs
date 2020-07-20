@@ -26,7 +26,7 @@ public class LightSpellP2 : MonoBehaviour
         bool contains = enemyList.Exists(o => o == other);
         
         if(other.tag == "Enemy" && contains == false){
-            other.GetComponent<Enemy>().TakeDamage(transform.position, damage, source);
+            other.GetComponent<Enemy>().TakeDamage(transform.position, damage, source, Color.yellow);
             enemyList.Add(other);
         }
     }

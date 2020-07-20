@@ -265,7 +265,7 @@ public class Enemy : MonoBehaviour
     }
 
 
-    public void TakeDamage(Vector3 attackPosition, float damageAmount, Transform source){
+    public void TakeDamage(Vector3 attackPosition, float damageAmount, Transform source, Color customColor){
       health -= damageAmount;
       
       CheckDeath();
@@ -273,10 +273,10 @@ public class Enemy : MonoBehaviour
       image.fillAmount = health / maxHealth;
       Vector3 dirFromAttacker = (transform.position - attackPosition).normalized;
 
-      float knockbackDistance = 1f;
+      float knockbackDistance = 10f;
       transform.position += dirFromAttacker * knockbackDistance;
       SpawnBlood();
-      DamagePopUp.Create(transform.position, damageAmount);
+      DamagePopUp.Create(transform.position, damageAmount, customColor);
 
       Debug.Log("YOU HIT AN ENEMYYYYY");
     }
@@ -342,9 +342,15 @@ public class Enemy : MonoBehaviour
     public void Burn(float burnDamage){
         health -= burnDamage;
         SpawnBlood();
-        DamagePopUp.Create(transform.position, burnDamage);
+        DamagePopUp.Create(transform.position, burnDamage, Color.red);
         image.fillAmount = health/maxHealth;
         CheckDeath();
+    }
+    public void Knockback(Vector3 attackPosition){
+      Vector3 dirFromAttacker = (transform.position - attackPosition).normalized;
+
+      float knockbackDistance = 70f;
+      transform.position += dirFromAttacker * knockbackDistance;
     }
     public void Slow(float newspeed){
         currentSpeed = newspeed;

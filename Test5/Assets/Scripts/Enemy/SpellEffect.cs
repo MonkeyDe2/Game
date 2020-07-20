@@ -47,6 +47,9 @@ public class SpellEffect : MonoBehaviour
         burning = 0;
         InvokeRepeating(effect, 1f, 1f);
     }
+    public void Knockback(Vector3 attackPosition){
+        enemy.Knockback(attackPosition);
+    }
     public void StartSlow(string effect){        
         newspeed = enemy.BaseSpeed * (1 - playerSpellStat.SlowPercentage);
         if (slowed < playerSpellStat.BurnDuration)

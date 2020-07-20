@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IceSpell : MonoBehaviour
+public class basicAtk : MonoBehaviour
 {
     private SpellEffect spellEffect;
     private SpellScript spellScript;
@@ -10,11 +10,7 @@ public class IceSpell : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         if(other.tag == "Enemy"){
             spellScript = gameObject.GetComponent<SpellScript>();
-            other.GetComponent<Enemy>().TakeDamage(transform.position, spellScript.damage, spellScript.source, Color.blue);
-            spellEffect = other.GetComponent<SpellEffect>();
-            spellEffect.StartSlow("Slow");
-
+            other.GetComponent<Enemy>().TakeDamage(transform.position, spellScript.damage, spellScript.source, Color.white);
         }
     }
-
 }

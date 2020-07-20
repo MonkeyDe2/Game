@@ -214,7 +214,7 @@ public class Player : MonoBehaviour
 
 
     private void PhysicalAttack(){
-      if (Input.GetMouseButtonDown(0) && Active){
+      if (Input.GetMouseButtonDown(0) && Active && open == false){
         state = State.Attack;
 
         Vector3 mousePosition = UtilClass.GetMouseWorldPosition();
